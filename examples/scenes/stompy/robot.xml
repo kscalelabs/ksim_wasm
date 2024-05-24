@@ -1,5 +1,5 @@
 <mujoco model="robot">
-  <compiler angle="radian"/>
+  <compiler angle="radian" meshdir="meshes" texturedir="meshes" autolimits="true"/>
   <asset>
     <mesh name="torso_1_top_torso_1" file="torso_1_top_torso_1.stl" />
     <mesh name="head_1_x4_1_pcb_1" file="head_1_x4_1_pcb_1.stl" />
