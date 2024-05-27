@@ -30,7 +30,7 @@ export function setupGUI(parentContext) {
     "Humanoid": "humanoid.xml", "Cassie": "agility_cassie/scene.xml",
     "Hammock": "hammock.xml", "Balloons": "balloons.xml", "Hand": "shadow_hand/scene_right.xml",
     "Mug": "mug.xml", "Tendon": "model_with_tendon.xml", "Stompy_Solo_Arm": "stompy/_env_solo_arm.xml",
-    "Stompy_dual_Arm": "stompy/_env_dual_arm.xml", "Stompy_torso": "stompy/_env_torso.xml", "stompy_walk: stompy/scene_humanoid.xml"
+    "Stompy_dual_Arm": "stompy/_env_dual_arm.xml", "Stompy_torso": "stompy/_env_torso.xml",
   }).name('Example Scene').onChange(reload);
 
   // Add a help menu.
