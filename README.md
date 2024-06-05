@@ -1,24 +1,21 @@
 <p align="center">
   <a href="https://zalo.github.io/mujoco_wasm/"><img src="./examples/MuJoCoWasmLogo.png" href></a>
 </p>
-<p align="left">
-  <a href="https://github.com/zalo/mujoco_wasm/deployments/activity_log?environment=github-pages">
-      <img src="https://img.shields.io/github/deployments/zalo/mujoco_wasm/github-pages?label=Github%20Pages%20Deployment" title="Github Pages Deployment"></a>
-  <!--<a href="https://github.com/zalo/mujoco_wasm/deployments/activity_log?environment=Production">
-      <img src="https://img.shields.io/github/deployments/zalo/mujoco_wasm/Production?label=Vercel%20Deployment" title="Vercel Deployment"></a> -->
-  <!--<a href="https://lgtm.com/projects/g/zalo/mujoco_wasm/context:javascript">
-      <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/zalo/mujoco_wasm.svg?logo=lgtm&logoWidth=18"/></a> -->
-  <a href="https://github.com/zalo/mujoco_wasm/commits/main">
-      <img src="https://img.shields.io/github/last-commit/zalo/mujoco_wasm" title="Last Commit Date"></a>
-  <a href="https://github.com/zalo/mujoco_wasm/blob/main/LICENSE">
-      <img src="https://img.shields.io/badge/license-MIT-brightgreen" title="License: MIT"></a>
-</p>
+
+<div align="center">
+
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/kscalelabs/ksim/blob/main/LICENSE)
+[![Discord](https://img.shields.io/discord/1224056091017478166)](https://discord.gg/k5mSvCkYQh)
+[![Wiki](https://img.shields.io/badge/wiki-humanoids-black)](https://humanoids.wiki)
+
+</div>
 
 ## The Power of MuJoCo in your Browser.
 
 Load and Run MuJoCo 2.3.1 Models using JavaScript and WebAssembly.
 
-This repo is a fork of @stillonearth 's starter repository, adding tons of functionality and a comprehensive example scene.
+This repo is a fork of @zalo 's starter repository, adding tons of functionality and stompy robot scene from kscale labs. 
+
 
 ### [See the Live Demo Here](https://zalo.github.io/mujoco_wasm/)
 
@@ -26,23 +23,7 @@ This repo is a fork of @stillonearth 's starter repository, adding tons of funct
 
 ## Building
 
-**1. Install emscripten**
-
-**2. Build the mujoco_wasm Binary**
-
-On Linux, use:
-```bash
-mkdir build
-cd build
-emcmake cmake ..
-make
-```
-
-On Windows, run `build_windows.bat`.
-
-*3. (Optional) Update MuJoCo libs*
-
-Build MuJoCo libs with wasm target and place to lib. Currently v2.3.1 included.
+### [See the wiki page Here](https://humanoids.wiki/w/MuJoCo_WASM)
 
 ## JavaScript API
 
