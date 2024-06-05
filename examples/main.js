@@ -13,14 +13,10 @@ import {
 } from './mujocoUtils.js';
 import load_mujoco from '../dist/mujoco_wasm.js';
 
-// Generate a version string based on a hash (for simplicity using Date.now)
-const version = Date.now().toString(36);
-
 const mujoco = await load_mujoco();
+const version = '1.0.0'; // You can automate this based on your build process
 
 var initialScene = `humanoid.xml?v=${version}`;
-console.log(`Full URL with version string for cache busting: ./examples/scenes/${initialScene}`);
-
 mujoco.FS.mkdir('/working');
 mujoco.FS.mount(mujoco.MEMFS, { root: '.' }, '/working');
 mujoco.FS.writeFile(`/working/${initialScene}`, await (await fetch(`./examples/scenes/${initialScene}`)).text());
@@ -107,7 +103,6 @@ export class MuJoCoDemo {
   }
 
   onWindowResize() {
-    console.log('Window resize event triggered');
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -260,9 +255,6 @@ function debounce(func, wait) {
   return function (...args) {
     const context = this;
     clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      console.log(`Debounced function executed after ${wait}ms`);
-      func.apply(context, args);
-    }, wait);
+    timeout = setTimeout(() => func.apply(context, args), wait);
   };
 }
